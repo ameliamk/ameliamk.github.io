@@ -9,9 +9,8 @@ let dotlimit = 100;
 
 const canvaselement = document.getElementById("maincanvas");
 const canvasdraw = canvaselement.getContext("2d");
-const width = window.innerWidth;
-const height = window.innerHeight;
-
+const width = window.screen.width;
+const height = window.screen.height;
 canvaselement.height = height;
 canvaselement.width = width;
 
