@@ -13,8 +13,8 @@ const body = document.getElementsByTagName("body")[0];
 var width = body.clientWidth;
 var height = body.clientHeight;
 
-const bglight = [50, 33, 99];
-const bgdark = [50, 17, 110];
+const bglight = [55, 33, 110];
+const bgdark = [65, 17, 99];
 
 function createdot() {
     // y pos, x pos, y vel, x vel, brightness
