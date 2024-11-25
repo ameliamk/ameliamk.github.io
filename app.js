@@ -18,7 +18,11 @@ const bgdark = [50, 17, 110];
 
 function createdot() {
     // y pos, x pos, y vel, x vel, brightness
-    return [height, Math.floor(Math.random() * width), Math.floor((height / 1000) * (Math.random() * 15)), Math.floor((width / 1000) * (Math.random() * 7.5)), Math.random()];
+    return [height, 
+        Math.floor(Math.random() * width), 
+        Math.floor((height / 1000) * (Math.random() * 15)), 
+        Math.floor((width / 1000) * ((Math.random() * 7.5) - 7.5/2)), 
+        Math.random()];
 }
 
 for (let i = 0; i != dotlimit; i++) {
