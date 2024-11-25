@@ -1,10 +1,8 @@
-console.log("xcode took 20 minutes to install,, oops");
-
 function rgb(r, g, b) {
     return "#" + (r << 16 | g << 8 | b).toString(16);
 }
 
-let dots = [];
+var dots = [];
 const dotlimit = 150;
 const dotsize = 2;
 
@@ -12,15 +10,15 @@ const canvaselement = document.getElementById("maincanvas");
 const canvasdraw = canvaselement.getContext("2d");
 
 const body = document.getElementsByTagName("body")[0];
-width = body.clientWidth;
-height = body.clientHeight;
+var width = body.clientWidth;
+var height = body.clientHeight;
 
-const bgdark = [102, 33, 99];
-const bglight = [100, 17, 110];
+const bglight = [50, 33, 99];
+const bgdark = [50, 17, 110];
 
 function createdot() {
     // y pos, x pos, y vel, x vel, brightness
-    return [height, Math.floor(Math.random() * width), Math.floor(Math.random() * 10), Math.floor(Math.random() * 2), Math.random()];
+    return [height, Math.floor(Math.random() * width), Math.floor((height / 1000) * (Math.random() * 15)), Math.floor((width / 1000) * (Math.random() * 7.5)), Math.random()];
 }
 
 for (let i = 0; i != dotlimit; i++) {
@@ -34,9 +32,9 @@ function main() {
     canvaselement.height = height;
     canvaselement.width = width;
 
-    backgrad = canvasdraw.createLinearGradient(width / 2, 0, width / 2, height);
-    backgrad.addColorStop(0, rgb(bgdark[0], bgdark[1], bgdark[2]));
-    backgrad.addColorStop(1, rgb(bglight[0], bglight[1], bglight[2]));
+    let backgrad = canvasdraw.createLinearGradient(width / 2, 0, width / 2, height);
+    backgrad.addColorStop(0, rgb(bglight[0], bglight[1], bglight[2]));
+    backgrad.addColorStop(1, rgb(bgdark[0], bgdark[1], bgdark[2]));
     canvasdraw.fillStyle = backgrad;
     canvasdraw.fillRect(0, 0, width, height);
 
