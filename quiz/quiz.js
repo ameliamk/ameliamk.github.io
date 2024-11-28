@@ -1,3 +1,5 @@
+// congrats, you used inspect element to cheat. or looked at the repo. whatever
+
 let questions = [
     ["What is the worldwide network of computers called?", "internet"],
     ["What HTML element would be a table row?\n<__>", "tr"],
@@ -8,7 +10,11 @@ let questions = [
     ["What category of devices do PCs fall in?", "fixed"],
     ["How is the computer you are using connected to the internet?\nE_______t", "ethernet"],
     ["When did Windows XP release?", "2001"],
-    ["What port is HTTPS on?", "443"]
+    ["What port is HTTPS on?", "443"],
+    ["..and what port is HTTP?", "80"],
+    ["In what question is the answer \"anchovies\"?\nQuestion _", "4"],
+    ["What is the most iconic form of magnetic media?\n______ disk", "floppy"],
+    ["What is the most common network topology?\nHint: space", "star"]
 ]
 
 const quiznumber = document.getElementById("quiznumber")
